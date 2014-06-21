@@ -11,6 +11,7 @@ class VideoController < ApplicationController
 
 	def create
 		@video = Account.new(post_params)
+		
 		if @video.save
 			redirect_to '/video/index'
 			#flash[:error] = "Video recorded"
